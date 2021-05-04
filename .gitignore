@@ -3,3 +3,7 @@
 ################################################################################
 
 /ModularMain/bin
+/ModularMain/obj
+/ModularMain/Properties/PublishProfiles
+/ModularRazorWeb/bin
+/ModularRazorWeb/obj

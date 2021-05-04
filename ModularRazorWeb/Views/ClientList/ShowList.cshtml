@@ -1,0 +1,43 @@
+﻿@model ModularRazorWeb.Models.ClientListViewModel
+
+<script src="~/js/zoid-components/client-list.js"></script>
+
+<div role="main" class="main-content">
+    <div class="page-content container container-plus">
+
+        <div class="card acard mt-2 mt-lg-3">
+            <div class="card-header">
+                <h3 class="card-title text-125 text-primary-d2">
+                    <i class="far fa-edit text-dark-l3 mr-1"></i>
+                    Client List
+                </h3>
+            </div>
+
+            <div class="card-body p-0 border-x-1 border-b-1 brc-default-m4 radius-0 overflow-hidden">
+
+                <table class="table text-dark-m2 text-95 bgc-white ml-n1px" id="table">
+                    <thead class="bgc-white text-grey text-uppercase text-80">
+                        <tr>
+                            <th style="" data-field="accountNo"><div class="th-inner sortable both">Account No</div><div class="fht-cell"></div></th>
+                            <th style="" data-field="clientName"><div class="th-inner sortable both">Client Name</div><div class="fht-cell"></div></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @if (Model.Clients != null && Model.Clients.Count > 0)
+                        {
+                            foreach (var client in Model.Clients)
+                            {
+                                <tr>
+                                    <td>@client.AccountNo</td>
+                                    <td>@client.Name</td>
+                                </tr>
+                            }
+                        }
+                    </tbody>
+                </table>
+
+            </div>
+        </div>
+
+    </div>
+</div>

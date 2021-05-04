@@ -1,0 +1,86 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - ModularMain</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/lib/ace-v3.1.1/dist/css/ace-font.css" />
+    <link rel="stylesheet" href="~/lib/ace-v3.1.1/dist/css/ace.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" />
+    <script src="~/js/zoid.js"></script>
+</head>
+<body>
+    <div class="body-container">
+        <nav class="navbar navbar-expand-lg navbar-fixed navbar-blue">
+            <div class="navbar-inner">
+
+                <div class="navbar-menu collapse navbar-collapse navbar-backdrop" id="navbarMenu">
+
+                    <div class="navbar-nav">
+                        <ul class="nav">
+
+                            <li class="nav-item dropdown dropdown-mega">
+                                <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                                    <i class="fa fa-list-alt mr-2 d-lg-none"></i>
+                                    Mega
+                                    <i class="caret fa fa-angle-down d-none d-lg-block"></i>
+                                    <i class="caret fa fa-angle-left d-block d-lg-none"></i>
+                                </a>
+
+                                <div class="dropdown-menu p-0 dropdown-animated bgc-secondary-l4 brc-primary-m3 border-t-0 border-b-2 ace-scrollbar">
+
+                                    <div class="d-flex flex-column">
+
+                                        <div class="row mx-0">
+
+                                            <div class="col-lg-4 col-12 p-2 p-lg-3 p-xl-4 d-flex flex-column align-items-center">
+                                                <div class="w-100 mb-3">
+                                                    <h5 class="col-lg-9 mx-auto text-dark-m2 px-0">
+                                                        <i class="fa fa-clipboard-check mr-1 text-purple-m1"></i>
+                                                        Module 1
+                                                    </h5>
+                                                </div>
+
+                                                <div class="col-lg-9 list-group px-0 border-1 brc-default-l2 radius-1 shadow-md">
+                                                    @Html.ActionLink(linkText: "Input Details", actionName: null, controllerName: "InputDetails", routeValues: null, htmlAttributes: new { @class = "border-0 bgc-h-primary-l4 list-group-item list-group-item-action" })
+                                                    @Html.ActionLink(linkText: "List Details", actionName: null, controllerName: "List", routeValues: null, htmlAttributes: new { @class = "border-0 bgc-h-primary-l4 list-group-item list-group-item-action" })
+                                                </div>
+                                            </div><!-- .col:mega tasks -->
+
+                                        </div><!-- .row: mega -->
+
+                                    </div>
+
+                                </div>
+
+                            </li>
+
+                        </ul>
+                    </div>
+
+                </div>
+
+            </div>
+        </nav>
+
+        @*<div class="main-container bgc-white">
+                <main role="main" class="pb-3">
+                    @RenderBody()
+                </main>
+            </div>*@
+        @RenderBody()
+    </div>
+
+    <footer class="border-top footer text-muted">
+        <div class="container">
+            &copy; 2021 - ModularMain - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+        </div>
+    </footer>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/lib/ace-v3.1.1/dist/js/ace.min.js"></script>
+    <script src="~/js/site.js"></script>
+    @RenderSection("Scripts", required: false)
+</body>
+</html>
