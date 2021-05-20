@@ -33,7 +33,7 @@ export class InputDetailsComponent {
   private initializeZoid() {
     const InputDetailsComponent = new zoid.create({
       tag: "zoid-input-details",
-      url: "http://localhost/ModularAngularWeb/input-details",
+      url: "http://localhost:81/input-details",
 
       dimensions: {
         width: "100%",

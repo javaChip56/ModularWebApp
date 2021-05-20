@@ -7,3 +7,6 @@
 /ModularMain/Properties/PublishProfiles
 /ModularRazorWeb/bin
 /ModularRazorWeb/obj
+/ModularWebApp/ModularMain/bin/Debug/netcoreapp3.1
+/ModulesRCL/obj
+/Research/ModularWebApp/ModularMain/Modules/netcoreapp3.1

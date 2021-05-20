@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 namespace ModularMain.Controllers
 {
     [Route("[controller]")]
-    public class InputDetailsController : Controller
+    public class sInputDetailsController : Controller
     {
         public ActionResult Index()
         {
